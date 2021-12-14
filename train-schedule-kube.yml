@@ -35,7 +35,7 @@ spec:
       - name: train-schedule
         image: vgarg21/project2:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 32767
         livenessProbe:
           httpGet:
             path: /
