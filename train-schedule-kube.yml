@@ -8,8 +8,8 @@ spec:
     app: train-schedule
   ports:
   - protocol: TCP
-    port: 8080
-    nodePort: 8080
+    port: 32767
+    nodePort: 32767
 
 ---
 
@@ -35,7 +35,7 @@ spec:
       - name: train-schedule
         image: vgarg21/project2:latest
         ports:
-        - containerPort: 32767
+        - containerPort: 8080
         livenessProbe:
           httpGet:
             path: /
